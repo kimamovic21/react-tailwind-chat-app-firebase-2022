@@ -15,8 +15,8 @@ const Signout = () => {
             onClick={() => auth.signOut()}>
         Sign out
     </button>
-  )
-}
+  );
+};
 
 export default Signout;
 

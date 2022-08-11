@@ -17,8 +17,8 @@ const Signin = () => {
     <div className={style.wrapper}>
         <GoogleButton onClick={googleSignIn}/>
     </div>
-  )
-}
+  );
+};
 
 export default Signin;
 

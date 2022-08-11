@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import {auth} from './firebase';
 import {useAuthState} from 'react-firebase-hooks/auth';
+import Chat from "./components/Chat";
 
 const style = {
   appContainer: `max-w-[728px] mx-auto text-center`,
@@ -20,7 +21,7 @@ function App() {
        
           <Navbar />
 
-
+          <Chat />
 
       </section>
 
@@ -41,4 +42,5 @@ export default App;
 // 6. importujemo auth
 // 7. importujemo react firebase hook
 // 8. dodajemo const user
-// 9. 
+// 9. importujemo Chat.jsx komponentu
+// 10. 

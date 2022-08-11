@@ -22,8 +22,8 @@ const Navbar = () => {
         {user ? <Signout /> : <Signin />}
 
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;
 

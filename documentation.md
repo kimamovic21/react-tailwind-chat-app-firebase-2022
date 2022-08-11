@@ -36,4 +36,8 @@ npm install --save react-firebase-hooks
 24.  terminalu instaliramo google dugme paket
 npm install react-google-button
 25. u components folderu kreiramo Signout.jsx komponentu
-26. 
+26. u components folderu kreiramo Chat.jsx komponentu
+27. otvaramo i uredujemo Chat.jsx komponentu
+28. u components folderu kreiramo Message.jsx komponentu
+29. otvaramo i uredujemo Message.jsx komponentu
+30. 
