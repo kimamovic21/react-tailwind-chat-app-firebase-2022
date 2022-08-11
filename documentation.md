@@ -40,4 +40,36 @@ npm install react-google-button
 27. otvaramo i uredujemo Chat.jsx komponentu
 28. u components folderu kreiramo Message.jsx komponentu
 29. otvaramo i uredujemo Message.jsx komponentu
-30. 
+30. otvaramo Firestore database
+31. kliknemo dugme create database
+32. odaberemo start in production mode i kliknemo next dugme
+33. odaberemo clod firestore lokaciju i kliknemo enable
+34. otvaramo i uredujemo firebase.js fajl
+35. na cloud firestore odaberemo start a collection
+36. unesemo messages kao document parent path 
+37. generisemo auto-ID
+38. odaberemo: field - text, type - string, value - I'm learing React
+39. add field: field - timestamp, type - timestamp
+40. kliknemo save dugme
+41. dodajemo useState i useEffect React hooks Chat.jsx komponenti
+42. otvaramo i uredujemo Message.jsx komponentu
+43. 
+
+
+
+
+Izmjeniti kod u cloud firestore rules : 
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write;
+    }
+  }
+}
+
+
+
+Pitanja i odgovori:
+
+https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denied-missing-or-insufficient-permissions

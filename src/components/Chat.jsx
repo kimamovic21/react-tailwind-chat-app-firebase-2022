@@ -1,5 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Message from './Message';
+import {query,collection, onSnapshot, orderBy} from 'firebase/firestore';
+import {db} from '../firebase';
 
 const style = {
     main: `flex flex-col p-[10px] relative`
@@ -7,23 +9,45 @@ const style = {
 
 const Chat = () => {
 
-  const scroll = useRef()
+  const [messages, setMessages] = useState([]);
+
+  const scroll = useRef();
+
+  useEffect(() => {
+    const q = query(collection(db, 'messages'), orderBy('timestamp'))
+    const unsbuscribe = onSnapshot(q, (querySnapshot) => {
+        let messages = []
+        querySnapshot.forEach((doc) => {
+            messages.push({...doc.data(), id:doc.id})
+        });
+        setMessages(messages)
+    });
+    return () => unsbuscribe();
+  }, []);
 
   return (
     <>
 
       <main className={style.main}>
+
             {/* Chat message component */}
-            <Message />
+            {messages && messages.map((message) => (
+                <Message key={message.id}
+                         message={message} 
+                />
+            ))}
+         
       </main>
+      
             {/* Send message component */}
       <span ref={scroll}></span>
-      
+
     </>
   );
 };
 
 export default Chat;
+
 
 
 
@@ -34,4 +58,9 @@ export default Chat;
 // 4. importujemo useState, useEffect, useRef reack hooks
 // 5. dodajemo const scroll
 // 6. importujemo Message.jsx komponentu
-// 7. 
+// 7. dodajemo useState React hook
+// 8. dodajemo useEffect React hook
+// 9. importujemo db
+// 10. unutar main elementa dodajemo map js metodu
+// 11. 
+

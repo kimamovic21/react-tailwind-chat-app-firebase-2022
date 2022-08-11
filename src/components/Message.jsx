@@ -7,13 +7,14 @@ const style = {
     received: `bg-[#e5e5ea] text-[#0f0f0f] float-right rounded-br-full`,
 }
 
-const Message = () => {
+const Message = ({message}) => {
   return (
     <div>
 
         <div className={style.message}>
             <p className={style.name}>Kerim</p>
-            <p>I'm learning React</p>
+            {/* <p>I'm learning React</p>  */}
+            <p>{message.text}</p>
         </div>
 
     </div>
@@ -29,4 +30,5 @@ export default Message;
 // 2. div elementu dodajemo klasu
 // 3. unutar div elementa dodajemo p element
 // 4. p elementu dodajemo klasu
-// 5. 
+// 5. dodajemo {message} unutar Message() jsx funkcije
+// 6. 
