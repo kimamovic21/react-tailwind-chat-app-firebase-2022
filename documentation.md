@@ -55,8 +55,7 @@ npm install react-google-button
 42. otvaramo i uredujemo SendMessage.jsx komponentu
 43. u components folderu kreiramo SendMessage.jsx komponentu
 44. otvaramo i uredujemo SendMessage.jsx komponentu
-45. 
-
+ 
 
 
 
@@ -73,6 +72,20 @@ service cloud.firestore {
 
 
 
+
 Pitanja i odgovori:
 
 https://stackoverflow.com/questions/56510745/firebaseerror-code-permission-denied-missing-or-insufficient-permissions
+
+
+
+
+Github pages:
+1. dodajemo homepage u package.json fajlu
+    "https://kimamovic21.github.io/(ime projekta)"
+2. u terminal kucamo npm i gh-pages --save-dev
+3. u package.json fajlu dodajemo predeploy i deploy
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+4. u terminal kucamo npm run deploy
+

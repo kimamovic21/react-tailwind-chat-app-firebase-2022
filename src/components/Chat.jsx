@@ -65,5 +65,4 @@ export default Chat;
 // 9. importujemo db
 // 10. unutar main elementa dodajemo map js metodu
 // 11. importujemo SendMessage.jsx komponentu
-// 12. 
 

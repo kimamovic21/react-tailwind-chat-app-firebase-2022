@@ -65,4 +65,4 @@ export default SendMessage;
 // 9. kreiramo sendMessage funkciju
 // 10. form elementu dodajemo onSubmit dogadaj
 // 11. dodajemo {scroll} u SendMessage jsx funkciju
-// 12. 
+

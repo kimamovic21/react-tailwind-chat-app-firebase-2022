@@ -43,4 +43,3 @@ export default Message;
 // 5. dodajemo {message} unutar Message() jsx funkcije
 // 6. dodajemo const messageClass
 // 7. importujemo auth
-// 8. 
