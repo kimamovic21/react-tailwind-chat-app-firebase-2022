@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import Message from './Message';
 import {query,collection, onSnapshot, orderBy} from 'firebase/firestore';
 import {db} from '../firebase';
+import SendMessage from './SendMessage';
 
 const style = {
     main: `flex flex-col p-[10px] relative`
@@ -40,6 +41,7 @@ const Chat = () => {
       </main>
       
             {/* Send message component */}
+            <SendMessage scroll={scroll} />
       <span ref={scroll}></span>
 
     </>
@@ -62,5 +64,6 @@ export default Chat;
 // 8. dodajemo useEffect React hook
 // 9. importujemo db
 // 10. unutar main elementa dodajemo map js metodu
-// 11. 
+// 11. importujemo SendMessage.jsx komponentu
+// 12. 
 

@@ -5,8 +5,8 @@ import {useAuthState} from 'react-firebase-hooks/auth';
 import Chat from "./components/Chat";
 
 const style = {
-  appContainer: `max-w-[728px] mx-auto text-center`,
-  sectionContainer: `flex flex-col h-[90vh] bg-gray-200 mt-10 shadow-xl border relative`,
+  appContainer: `max-w-[728px] mx-auto text-center h-screen mt-10`,
+  sectionContainer: `flex flex-col h-screen mt-[-10px]`,
 }
 
 function App() {
@@ -18,11 +18,9 @@ function App() {
     <div className={style.appContainer}>
 
       <section className={style.sectionContainer}>
-       
           <Navbar />
-
-          <Chat />
-
+          {user ? <Chat/> : null}
+          {/* <Chat /> */}
       </section>
 
     </div>
@@ -43,4 +41,4 @@ export default App;
 // 7. importujemo react firebase hook
 // 8. dodajemo const user
 // 9. importujemo Chat.jsx komponentu
-// 10. 
+// 10. dodajemo ternarni operator za user

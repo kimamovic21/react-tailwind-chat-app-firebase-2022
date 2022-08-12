@@ -52,8 +52,11 @@ npm install react-google-button
 39. add field: field - timestamp, type - timestamp
 40. kliknemo save dugme
 41. dodajemo useState i useEffect React hooks Chat.jsx komponenti
-42. otvaramo i uredujemo Message.jsx komponentu
-43. 
+42. otvaramo i uredujemo SendMessage.jsx komponentu
+43. u components folderu kreiramo SendMessage.jsx komponentu
+44. otvaramo i uredujemo SendMessage.jsx komponentu
+45. 
+
 
 
 
